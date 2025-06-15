@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git buyruqlari</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: chocolate;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        pre {
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        code {
+            font-family: monospace;
+            background-color: rgb(93, 100, 102);
+            padding: 2px 4px;
+            color: yellow;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<h1>Git bilan ishlovchi asosiy buyruqlar</h1>
+
+<body>
+    <ol>
+        <li>
+            <h2>Git repository yaratish</h2>
+            <p>Git repository yaratish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git init</code></pre>
+            <p>Bu buyruq joriy papkada yangi Git repository yaratadi.</p>
+        </li>
+
+        <li>
+            <h2>Git repositoryga fayl qo'shish</h2>
+            <p>Faylni Git repositoryga qo'shish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git add <fayl_nomi></code></pre>
+            <p>Bu buyruq faylni staging area ga qo'shadi.</p>
+        </li>
+
+        <li>
+            <h2>Git repositorydagi o'zgarishlarni saqlash</h2>
+            <p>O'zgarishlarni saqlash uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git commit -m "O'zgarishlar haqida qisqacha ma'lumot"</code></pre>
+            <p>Bu buyruq staging area dagi o'zgarishlarni Git repositoryga saqlaydi.</p>
+        </li>
+        <li>
+            <h2>Git repositorydagi o'zgarishlarni ko'rish</h2>
+            <p>O'zgarishlarni ko'rish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git status</code></pre>
+            <p>Bu buyruq joriy holatni va staging area dagi o'zgarishlarni ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git repositorydagi tarixni ko'rish</h2>
+            <p>Git repositorydagi tarixni ko'rish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git log</code></pre>
+            <p>Bu buyruq barcha commitlarni va ularning tafsilotlarini ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git repositorydan faylni o'chirish</h2>
+            <p>Faylni Git repositorydan o'chirish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git rm <fayl_nomi></code></pre>
+            <p>Bu buyruq faylni staging area dan o'chiradi va keyingi commitda o'chiriladi.</p>
+        </li>
+        <li>
+            <h2>Git repositoryni boshqa joyga nusxalash</h2>
+            <p>Git repositoryni boshqa joyga nusxalash uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git clone <repository_url></code></pre>
+            <p>Bu buyruq berilgan URL manzilidagi Git repositoryni joriy papkaga nusxalaydi.</p>
+        </li>
+        <li>
+            <h2>Git branch yaratish</h2>
+            <p>Yangi branch yaratish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git branch <branch_nomi></code></pre>
+            <p>Bu buyruq yangi branch yaratadi, lekin uni faollashtirmaydi.</p>
+        </li>
+        <li>
+            <h2>Git branchga o'tish</h2>
+            <p>Yaratilgan branchga o'tish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git checkout <branch_nomi></code></pre>
+            <pre><code>git switch <branch_nomi></code></pre>
+            <p>Bu buyruq berilgan branchga o'tadi.</p>
+        </li>
+        <li>
+            <h2>Git branchlarni ko'rish</h2>
+            <p>Yaratilgan branchlarni ko'rish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git branch</code></pre>
+            <p>Bu buyruq barcha branchlarni va joriy branchni ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git branchni o'chirish</h2>
+            <p>Branchni o'chirish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git branch -d <branch_nomi></code></pre>
+            <p>Bu buyruq berilgan branchni o'chiradi, agar u bo'sh bo'lsa.</p>
+        </li>
+        <li>
+            <h2>Git remote repositoryga push qilish</h2>
+            <p>O'zgarishlarni remote repositoryga push qilish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git push origin <branch_nomi></code></pre>
+            <p>Bu buyruq joriy branchdagi o'zgarishlarni remote repositoryga yuboradi.</p>
+        </li>
+        <li>
+            <h2>Git remote repositorydan pull qilish</h2>
+            <p>Remote repositorydan o'zgarishlarni olish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git pull origin <branch_nomi></code></pre>
+            <p>Bu buyruq remote repositorydagi o'zgarishlarni joriy branchga qo'shadi.</p>
+        </li>
+        <li>
+            <h2>Git remote repositoryni qo'shish</h2>
+            <p>Remote repositoryni qo'shish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git remote add origin repository_url</code></pre>
+            <p>Bu buyruq remote repositoryni joriy Git repositoryga qo'shadi.</p>
+        </li>
+        <li>
+            <h2>Git remote repositoryni ko'rish</h2>
+            <p>Remote repositorylarni ko'rish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git remote -v</code></pre>
+            <p>Bu buyruq barcha remote repositorylarni va ularning URL manzillarini ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git merge qilish</h2>
+            <p>Branchlarni birlashtirish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git merge <branch_nomi></code></pre>
+            <p>Bu buyruq berilgan branchdagi o'zgarishlarni joriy branchga qo'shadi.</p>
+        </li>
+        <li>
+            <h2>Git stash qilish</h2>
+            <p>Joriy o'zgarishlarni vaqtincha saqlash uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git stash</code></pre>
+            <p>Bu buyruq joriy o'zgarishlarni stashga saqlaydi va repositoryni toza holatga qaytaradi.</p>
+        </li>
+        <li>
+            <h2>Git stashdan o'zgarishlarni qaytarish</h2>
+            <p>Stashdagi o'zgarishlarni qaytarish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git stash pop</code></pre>
+            <p>Bu buyruq stashdagi oxirgi o'zgarishlarni joriy branchga qo'shadi.</p>
+        </li>
+        <li>
+            <h2>Git stashdagi o'zgarishlarni ko'rish</h2>
+            <p>Stashdagi o'zgarishlarni ko'rish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git stash list</code></pre>
+            <p>Bu buyruq stashdagi barcha o'zgarishlarni ro'yxatini ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git stashdagi o'zgarishlarni o'chirish</h2>
+            <p>Stashdagi o'zgarishlarni o'chirish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git stash drop</code></pre>
+            <p>Bu buyruq stashdagi oxirgi o'zgarishni o'chiradi.</p>
+        </li>
+        <li>
+            <h2>Git stashdagi o'zgarishlarni tozalash</h2>
+            <p>Barcha stashdagi o'zgarishlarni tozalash uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git stash clear</code></pre>
+            <p>Bu buyruq stashdagi barcha o'zgarishlarni o'chiradi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini ko'rish</h2>
+            <p>Git konfiguratsiyasini ko'rish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --list</code></pre>
+            <p>Bu buyruq Git konfiguratsiyasidagi barcha sozlamalarni ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini o'zgartirish</h2>
+            <p>Git konfiguratsiyasini o'zgartirish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global user.name "Ismingiz"</code></pre>
+            <pre><code>git config --global user.email "Emailingiz"</code></pre>
+            <p>Bu buyruqlar Git konfiguratsiyasida foydalanuvchi nomi va email manzilini o'rnatadi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini o'chirish</h2>
+            <p>Git konfiguratsiyasini o'chirish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global --unset user.name</code></pre>
+            <pre><code>git config --global --unset user.email</code></pre>
+            <p>Bu buyruqlar Git konfiguratsiyasidan foydalanuvchi nomi va email manzilini o'chiradi.</p>
+        </li>
+
+        <li>
+            <h2>Git konfiguratsiyasini faylga yozish</h2>
+            <p>Git konfiguratsiyasini faylga yozish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global -e</code></pre>
+            <p>Bu buyruq Git konfiguratsiya faylini ochadi va uni tahrirlash imkonini beradi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini fayldan o'qish</h2>
+            <p>Git konfiguratsiyasini fayldan o'qish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global -l</code></pre>
+            <p>Bu buyruq Git konfiguratsiya faylidan barcha sozlamalarni ko'rsatadi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini tozalash</h2>
+            <p>Git konfiguratsiyasini tozalash uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global --unset-all</code></pre>
+            <p>Bu buyruq Git konfiguratsiyasidagi barcha sozlamalarni o'chiradi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini faylga yozish</h2>
+            <p>Git konfiguratsiyasini faylga yozish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global -e</code></pre>
+            <p>Bu buyruq Git konfiguratsiya faylini ochadi va uni tahrirlash imkonini beradi.</p>
+        </li>
+        <li>
+            <h2>Git konfiguratsiyasini fayldan o'qish</h2>
+            <p>Git konfiguratsiyasini fayldan o'qish uchun quyidagi buyruqdan foydalanamiz:</p>
+            <pre><code>git config --global -l</code></pre>
+            <p>Bu buyruq Git konfiguratsiya faylidan barcha sozlamalarni ko'rsatadi.</p>
+        </li>
+    </ol>
+</body>
+
+</html>
