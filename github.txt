@@ -1,3 +1,89 @@
+        Git sozlamalari
+git config --global user.name "[name]"
+    Commit larga username kiritish
+
+git config --global user.email "[email]"
+    commit larga email kiritish
+
+        Repozitoriy hosil qilish
+git init [proyekt-nomi]
+    shu nomli lokal repository hosil qiladi
+
+git clone [url]
+    remote repository ni yuklab oladi
+
+        O'zgartirishlar kiritish
+git status
+    commit qilish kerak bo'lgan barcha yangi va/yoki fayllar
+
+git diff
+    index ga kiritilmagan fayllar orasidagi farqlar
+
+git add [fayl/papka]
+    index ga qo'shadi commitga tayyorlash uchun
+
+git diff --staged
+    oxirgi versiya va index orasidagi farqlar
+
+git reset [fayl]
+    faylni index dan chiqaradi (fayl ichi saqlanadi)
+
+git commit -m "[commit xabar]"
+    Fayl holatini xabar bilan commit qilish
+
+        O'zgarishlarni guruhlashtirish
+git branch
+    repository dagi lokal shoxa(branch) lar
+
+git branch [branch_nomi]
+    shu nomli branch ochadi
+
+git checkout [branch_nomi]
+    shu nomli branch ga o'tadi
+
+git switch [branch_nomi]
+    shu nomli branch ga o'tadi (yangi versiyalarda)
+
+git merge [branch_nomi]
+    joriy branch ga shu nomli branch ni birlashtiradi
+
+git branch -d [branch_nomi]
+    shu nomli branch ni o'chiradi
+
+        Fayllarni qayta nomlash
+git rm [file]
+    papkadan o'chiradi va repositorydan o'chirish uchun belgilaydi
+
+git rm-cached [file]
+    git dan o'chiradi, faylni o'zi qoladi
+
+git mv [file-original] [file-renamed]
+    nomini o'zgartirib commit ga tayyorlaydi
+
+        Kuzatishlarni bekor qilish
+
+*.log
+build/
+temp-*
+    .gitignore fayliga git tomonidan 
+    kuzatilmaydigan fayl/papkalarni yozish
+
+git ls-files-other-ignored exclude-standart
+    loyihadagi kuzatilmaydigan barcha fayllar
+
+        Tarixni ko'rish
+git log 
+    shu branch dagi commit lar Tarixni
+
+git log-follow [file]
+    shu fayl commitlari tarixi va nomlari o'zgarishi
+
+git diff [1-branch] [keyingi-branch]
+    2 branch orasidagi fayllar tarkibi farqi
+
+
+
+
 …or create a new repository on the command line
 echo "# ALL_SRC" >> README.md
 git init
@@ -10,3 +96,4 @@ git push -u origin main
 git remote add origin https://github.com/SardorKhiva/ALL_SRC.git
 git branch -M main
 git push -u origin main
+
