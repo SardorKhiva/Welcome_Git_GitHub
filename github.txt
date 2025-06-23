@@ -81,6 +81,19 @@ git log-follow [file]
 git diff [1-branch] [keyingi-branch]
     2 branch orasidagi fayllar tarkibi farqi
 
+git show [commit]
+    commit metadatasi va o'zgargan tarkibini ko'rsatish
+
+        Commit larni takror bajarish
+
+git reset [commit]
+    [commit]dan keyingi o'zgarishlarni bekor qilish
+
+git reset-hard [commit]
+
+git count-objects -vH - repo hajmi
+
+    
 
 
 
