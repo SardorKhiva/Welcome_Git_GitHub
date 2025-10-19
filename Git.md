@@ -2,89 +2,126 @@
 
 ## git ni loyihaga initsializatsiya qilish
 
-### git init
+joriy papkada git repozitoriy hosil qilish:
 
-joriy papkada git repozitoriy hosil qilish
+```bash
+git init
+```
 
-### tree /a
+papkalar va fayllar trukturasi:
 
-papkalar va fayllar trukturasi
-
----
+```bash
+tree /a
+```
 
 ## git config - git sozlamalari
 
-### git config --list
+git sozlamalari ro'yhati:
 
-git sozlamalari ro'yhati
+```bash
+git config --list
+```
 
-### git config user.name
+foydalanuvchi nomini chiqaradi:
 
-foydalanuvchi nomini chiqaradi
+```bash
+git config user.name
+```
 
-### git config --system user.name "user_name"
+joriy kompyuter foydalanuvchisi (user) nomini kiritish:
 
-joriy kompyuter foydalanuvchisi (user) nomini kiritish
+```bash
+git config --system user.name "user_name"
+```
 
-### git config --global user.name "user_name"
+global foydalanuvchi nomini kiritish:
 
-global foydalanuvchi nomini kiritish
+```bash
+git config --global user.name "user_name"
+```
 
-### git config --local user.name "project_user_name"
+loyiha uchun foydalanuvchi nomini kiritish (default):
 
-loyiha uchun foydalanuvchi nomini kiritish (default)
+```bash
+git config --local user.name "project_user_name"
+```
 
-### git config --unset user.name
+foydalanuvchi nomini o'chirish:
 
-foydalanuvchi nomini o'chirish
+```bash 
+git config --unset user.name
+```
 
-### git config --unset user.email
+foydalanuvchi email ini o'chirish:
 
-foydalanuvchi email ini o'chirish
+```bash
+git config --unset user.email
+```
 
-### git config --remove-section user
+sozlamalardagi user seksiyasidagi kiritilganlarni o'chirish:
 
-sozlamalardagi user seksiyasidagi kiritilganlarni o'chirish
+```bash
+git config --remove-section user
+```
 
-### git config --global -core.editor "program/path"
+git commit yozish uchun matn muharririni tanlash:
 
-git commit yozish uchun matn muharririni tanlash
+```bash
+git config --global -core.editor "program/path"
+```
 
-### git config --global alias.c config
+git config ni git c deb alias bilan qisqartirishni sozlash, config = c:
 
-git config ni git c deb alias bilan qisqartirishni sozlash, config = c
+```bash
+git config --global alias.c config
+```
 
-### git config -h
+git sozlamalari haqida yordam ma'lumotlari olish:
 
-git sozlamalari haqida yordam ma'lumotlari olish
+```bash
+git config -h
+```
 
-### git help
+git haqida asosiy yordam:
 
-git haqida asosiy yordam
+```bash
+git help
+```
 
-### git help config
+sozlamalar haqida yordam:
 
-sozlamalar haqida yordam
+```bash
+git help config
+```
 
 ---
 
 ## Repozitoriy hosil qilish va birinchi commit
 
-### git status
+loyiha holati haqida ma'lumotlar (gitga qo'shilmagan, yangi qo'shilgan, o'chirilgan va o'zgargan fayllar ro'yhati):
 
-loyiha holati haqida ma'lumotlar (gitga qo'shilmagan, yangi qo'shilgan, o'chirilgan va o'zgargan fayllar ro'yhati)
+```bash
+git status
+```
 
-### git add . 
+barcha fayllarni git indexga qo'shish:
 
-barcha fayllarni git indexga qo'shish
+```bash
+git add . 
+```
 
-### git add "file_name"
+shu nomli faylni git index ga qo'shish:
 
-shu nomli faylni git index ga qo'shish
+```bash
+git add "file_name"
+```
 
-### git commit
+git config --global core.editor "editor/full/path" sozlamasida kiritilgan editor orqali commit xabari yozish:
 
-git config --global core.editor "editor/full/path" sozlamasida kiritilgan editor orqali commit xabari yozish
+
+```bash
+git commit
+```
 
 qisqa_sarlavha     1-qator (50 belgidan oshmasin)
 
@@ -113,12 +150,71 @@ git commit -m "refactor: Soddalashtir kodni o‘qish uchun"
 git commit -m "style: Navbar rangini o‘zgartir"
 ```
 
-### git commit -m "commit xabar"
+index ga kiritilgan qisqa commitlarga o'zgarish haqida ma'lumot yozish, git add qilingan fayl(lar)ga commit xabar kiritish:
 
-index ga kiritilgan qisqa commitlarga o'zgarish haqida ma'lumot yozish, git add qilingan fayl(lar)ga commit xabar kiritish
+```bash
+git commit -m "commit xabar"
+```
 
 ---
 
 ## Git va fayllarga bo'lgan huquq
 
-### git 
+```text
+bu mavzu hozirda uncha muhim emas
+4-videodarsda tushuntirilgan
+```
+
+---
+
+## git show, muallif va committer
+
+muallif - kodni 1-yozgan odam,
+
+commiter - kodni yangilab yozgan va commit qilgan odam
+
+shu commit haqida to'liq ma'lumotlarni ko'rish:
+
+```bash
+git show 'commit_hash_code'
+```
+
+boshqacharoq kengaytirilgan ko'rinishda:
+
+```bash
+git show --pretty=fuller cc2ada60b3d71482638103b9ccdbe14d957c254c
+```
+
+shu nomli muallifning (commiter emas, author) commitini yozish:
+
+```bash
+git commit --author='John <john@mail.uz>'
+```
+
+---
+
+## Fayllar va direktoriyalar yaratish, git status
+
+joriy papkadagi barcha fayllarni git index ga qo'shish:
+
+```bash
+git add .
+```
+
+.gitignore dan qat'iy nazar index ga qo'shish:
+
+```bash
+git add -force '.idea/project.iml'
+```
+
+yoki
+
+```bash
+git add -f '.idea/project.iml' 
+```
+
+Root dagi .idea papkasini indexdan olib tashlash:
+
+```bash
+git reset HEAD .idea
+```
