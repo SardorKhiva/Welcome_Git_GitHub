@@ -48,7 +48,7 @@ git config --local user.name "project_user_name"
 
 foydalanuvchi nomini o'chirish:
 
-```bash 
+```bash
 git config --unset user.name
 ```
 
@@ -117,7 +117,6 @@ git add "file_name"
 ```
 
 git config --global core.editor "editor/full/path" sozlamasida kiritilgan editor orqali commit xabari yozish:
-
 
 ```bash
 git commit
